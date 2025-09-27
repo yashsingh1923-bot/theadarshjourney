@@ -1,0 +1,126 @@
+:root {
+  --primary: #000;
+--accent: #ff3c3c;
+  --text: #fff;
+  --muted: #aaa;
+  --card-bg: #111;
+  --font: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--primary);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 40px 30px;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+/* LOGO + TEXT SIDE BY SIDE */
+.logo-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.7rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #4fc3f7, #3366cc, #4fc3f7);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shineText 3s ease-in-out infinite;
+}
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.cta-button {
+  background-color: var(--accent);
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(255, 60, 60, 0.4);
+  transition: all 0.3s ease;
+  margin-bottom: 18px;
+}
+
+.cta-button:hover {
+  background-color: #cc2f2f;
+  transform: translateY(-2px);
+}
+
+.timer {
+  font-size: 0.95rem;
+  color: #f1c40f;
+  margin-bottom: 20px;
+}
+
+.testimonials {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.testimonials p {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.75rem;
+  color: #777;
+  text-align: center;
+}
+
+@keyframes shineText {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
